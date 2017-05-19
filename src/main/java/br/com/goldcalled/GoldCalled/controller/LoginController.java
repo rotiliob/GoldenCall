@@ -12,11 +12,16 @@ public class LoginController {
 
     @Autowired
     UsuarioRepository usuarioRepository;
+    @Autowired
+    LoginController loginController;
 
     @RequestMapping("/")
     public String loginForm() {
         return "index";
     }
+
+    @RequestMapping("logout")
+    public String logout(){ return loginController.loginForm(); }
 
     @RequestMapping("logar")
     public String efetuarLogin(Usuario usuario){
