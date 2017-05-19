@@ -1,0 +1,4 @@
+/* Aqui se importa todos os arquivos de css. facilitando a manutencao, e fazendo uma única requisicao*/
+
+@import "reset.css";
+@import "principal.css";

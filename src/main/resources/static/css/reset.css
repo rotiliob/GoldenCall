@@ -1,0 +1,10 @@
+/*RESET básico PADRAO*/
+* {margin: 0;padding: 0; box-sizing: border-box}
+main, header, nav, section, article, aside, footer, div, figure, label {display: block;vertical-align: baseline}
+fieldset {border: none}
+ul, li, ol {list-style: none;}
+a, a:hover {text-decoration: none;cursor: pointer;color: inherit;}
+img {max-width: 100%}
+/*reset da pagina*/
+body{font-size: 62.5%}
+
