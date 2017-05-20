@@ -16,15 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class CriarUsuarioController {
 
-
-    @Autowired
-    PessoaService pessoaService;
     @Autowired
     UsuarioService usuarioService;
     @Autowired
     UsuarioRepository usuarioRepository;
-    @Autowired
-    PessoaRepository pessoaRepository;
 
     @RequestMapping("/NovoUsuario")
     public String novoUsuario() {
@@ -33,16 +28,11 @@ public class CriarUsuarioController {
     @PostMapping("/criar")
     public String criar(@ModelAttribute Usuario usuario) {
         Iterable<Usuario> usuarioBanco = usuarioRepository.findAll();
-        Iterable<Pessoa> pessoaBanco =  pessoaRepository.findAll();
 
         Usuario getUsuarioNome = new Usuario();
-        Pessoa getPessoaNome = new Pessoa();
 
         for ( Usuario usuario1 : usuarioBanco){
             getUsuarioNome = usuario1;
-        }
-        for (Pessoa pessoa : pessoaBanco){
-            getPessoaNome = pessoa;
         }
 
         if (usuario.getLogin().equalsIgnoreCase(getUsuarioNome.getLogin())){
@@ -52,7 +42,7 @@ public class CriarUsuarioController {
         if (usuario.getSenha().length() <= 3)
             return "index";
 
-        pessoaService.save(usuario.getPessoa());
+
         usuarioService.save(usuario);
 
         return "index";

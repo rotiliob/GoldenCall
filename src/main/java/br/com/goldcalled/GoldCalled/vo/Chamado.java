@@ -21,7 +21,7 @@ public class Chamado {
     @Column(name = "parecer_tecnico", nullable = false)
     private String parecerTecnico;
 
-    @OneToOne
+    @OneToMany
     private Usuario usuario;
 
     public Chamado() {

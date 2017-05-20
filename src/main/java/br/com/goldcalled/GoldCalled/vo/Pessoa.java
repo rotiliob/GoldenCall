@@ -5,9 +5,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "pessoa")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Pessoa {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "id_pessoa", nullable = false, unique = true)
     private long id;
     @Column(name = "nome", nullable = false)

@@ -4,12 +4,8 @@ import javax.persistence.*;
 import java.awt.*;
 
 @Entity
-@Table(name = "usuario")
-public class Usuario extends Component {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario", nullable = false, unique = true)
-    private long id;
+public class Usuario extends Pessoa{
+
     @Column(name = "nome_usuario", nullable = false)
     private String login;
     @Column(name = "senha", nullable = false)
@@ -17,26 +13,15 @@ public class Usuario extends Component {
     @Column(name = "tipo_usuario", nullable = false)
     private String tipoUsuario;
 
-    @OneToOne
-    private Pessoa pessoa;
-
     public Usuario() {
     }
 
     public Usuario(long id, String login, String senha, String tipoUsuario, Pessoa pessoa) {
-        this.id = id;
+//        this.id = id;
         this.login = login;
         this.senha = senha;
         this.tipoUsuario = tipoUsuario;
-        this.pessoa = pessoa;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+      //  this.pessoa = pessoa;
     }
 
     public String getLogin() {
@@ -63,11 +48,4 @@ public class Usuario extends Component {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Pessoa getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
 }

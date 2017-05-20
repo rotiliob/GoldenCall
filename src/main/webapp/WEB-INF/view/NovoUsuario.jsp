@@ -16,9 +16,9 @@
                                   <option value="administrador">Administrador</option>
                                   <option value="tecnico">Tecnico</option>
                                 </select><br/>
-               Nome  : <input type="text" name="pessoa.nome" /> <br />
-               Funcao: <input type="text" name="pessoa.funcao"  /> <br />
-               Setor : <input type="text" name="pessoa.setor"  /> <br />
+               Nome  : <input type="text" name="nome" /> <br />
+               Funcao: <input type="text" name="funcao"  /> <br />
+               Setor : <input type="text" name="setor"  /> <br />
                <p> <input type="submit" value="Criar"/></p><br />
                <p><input type="reset" value="Reset"/></p>
 
