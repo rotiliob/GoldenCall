@@ -41,7 +41,7 @@
 <div style="clear: both"></div>
 <br><br>
 
-	<a href="/NovoUsuario" style="font-size: 10pt; position: relative;top: 15%;left: -20%">
+	<a href="/cadusuario" style="font-size: 10pt; position: relative;top: 15%;left: -20%">
         Cadastrar-se </a>
         
     <a href="#" style="font-size: 10pt; position: relative;top: 9%;left: -11%">
@@ -62,7 +62,7 @@
     <div class="rodape">
         <div class="rodapeTexto">
             <p>Castro Neves Construtora - CNPJ: 03.803.853/0001-50</p>
-            <p>Rua Sebastião Malta Arcoverde, 85 | Parnamirim, Recife , PE</p>
+            <p>Rua Sebastiï¿½o Malta Arcoverde, 85 | Parnamirim, Recife , PE</p>
             <p>(81) 3268.4149 | cnc@castronevesconstrutora.com.br</p>
         </div>
         <div style="clear: both"></div>
