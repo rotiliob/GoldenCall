@@ -5,7 +5,8 @@ import java.awt.*;
 
 @Entity
 public class Usuario extends Pessoa{
-
+    //----------------------------------------------//
+    //-------------------Variable-------------------//
     @Column(name = "nome_usuario", nullable = false)
     private String login;
     @Column(name = "senha", nullable = false)
@@ -13,16 +14,26 @@ public class Usuario extends Pessoa{
     @Column(name = "tipo_usuario", nullable = false)
     private String tipoUsuario;
 
+    @OneToMany
+    private Chamado chamado;
+    //-------------------End Variable-------------------//
+    //--------------------------------------------------//
+
+    //-------------------------------------------------//
+    //-------------------Constructor-------------------//
     public Usuario() {
     }
 
-    public Usuario(long id, String login, String senha, String tipoUsuario, Pessoa pessoa) {
-//        this.id = id;
+    public Usuario( String login, String senha, String tipoUsuario, Pessoa pessoa) {
         this.login = login;
         this.senha = senha;
         this.tipoUsuario = tipoUsuario;
-      //  this.pessoa = pessoa;
     }
+    //-------------------End Constructor-------------------//
+    //-----------------------------------------------------//
+
+    //---------------------------------------------------------//
+    //-------------------Getters and Setters-------------------//
 
     public String getLogin() {
         return login;
@@ -47,5 +58,7 @@ public class Usuario extends Pessoa{
     public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
+    //-------------------End Getters and Setters-------------------//
+    //-------------------------------------------------------------//
 
 }

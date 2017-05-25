@@ -6,6 +6,8 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "chamado")
 public class Chamado {
+    //----------------------------------------------//
+    //-------------------Variable-------------------//
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_chamado", nullable = false, unique = true)
@@ -21,12 +23,20 @@ public class Chamado {
     @Column(name = "parecer_tecnico", nullable = false)
     private String parecerTecnico;
 
-    @OneToMany
+    @ManyToOne
     private Usuario usuario;
+    //-------------------End Variable-------------------//
+    //--------------------------------------------------//
 
+    //-------------------------------------------------//
+    //-------------------Constructor-------------------//
     public Chamado() {
     }
+    //-------------------End Constructor-------------------//
+    //-----------------------------------------------------//
 
+    //---------------------------------------------------------//
+    //-------------------Getters and Setters-------------------//
     public Chamado(long id, long numeroChamado, LocalDate dataCriacao, LocalDate dataConclusao, String status, String parecerTecnico, Usuario usuario) {
         this.id = id;
         this.numeroChamado = numeroChamado;
@@ -92,4 +102,6 @@ public class Chamado {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+    //-------------------End Getters and Setters-------------------//
+    //-------------------------------------------------------------//
 }

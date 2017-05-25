@@ -7,6 +7,8 @@ import javax.persistence.*;
 @Table(name = "pessoa")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Pessoa {
+    //----------------------------------------------//
+    //-------------------Variable-------------------//
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "id_pessoa", nullable = false, unique = true)
@@ -17,7 +19,11 @@ public class Pessoa {
     private String funcao;
     @Column(name = "setor", nullable = false)
     private String setor;
+    //-------------------End Variable-------------------//
+    //--------------------------------------------------//
 
+    //-------------------------------------------------//
+    //-------------------Constructor-------------------//
     public Pessoa() {
     }
 
@@ -27,7 +33,11 @@ public class Pessoa {
         this.funcao = funcao;
         this.setor = setor;
     }
+    //-------------------End Constructor-------------------//
+    //-----------------------------------------------------//
 
+    //---------------------------------------------------------//
+    //-------------------Getters and Setters-------------------//
     public long getId() {
         return id;
     }
@@ -59,4 +69,6 @@ public class Pessoa {
     public void setSetor(String setor) {
         this.setor = setor;
     }
+    //-------------------End Getters and Setters-------------------//
+    //-------------------------------------------------------------//
 }

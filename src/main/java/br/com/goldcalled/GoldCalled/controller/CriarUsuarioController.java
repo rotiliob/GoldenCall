@@ -21,9 +21,9 @@ public class CriarUsuarioController {
     @Autowired
     UsuarioRepository usuarioRepository;
 
-    @RequestMapping("/NovoUsuario")
+    @RequestMapping("/cadusuario")
     public String novoUsuario() {
-        return "/NovoUsuario";
+        return "/cadusuario";
     }
     @PostMapping("/criar")
     public String criar(@ModelAttribute Usuario usuario) {
