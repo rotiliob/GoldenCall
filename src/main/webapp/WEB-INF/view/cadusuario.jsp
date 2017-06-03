@@ -38,13 +38,13 @@
         <label><p>Senha</p><input type="password" name="senha" ></label>
         <label><p>Tipo de Acesso</p>
             <select name= "tipoUsuario">
-                 <option value="usuario">Usuário</option>
+                 <option value="usuario">Usuï¿½rio</option>
                  <option value="administrador">Administrador</option>
                  <option value="tecnico">Tecnico</option>
             </select><br/>
         </label>
           <label><p>Nome Completo</p><input type="text" name="nome"></label>
-          <label><p>Função</p><input type="text" name="funcao"></label>
+          <label><p>FuncÃ£o</p><input type="text" name="funcao"></label>
           <label><p>Setor</p><input type="text" name="setor"></label>
 
          </label>

@@ -5,15 +5,17 @@
 
 /* STYLOS PRINCIPAIS*/
 /*itulos*/
-h1.title-secao{    font-family: font-titulos,serif;color: #f47811;border-bottom: 3px solid #0057b9;display: table;margin: 0 auto;font-size: 4.5rem;font-weight: 100;padding: .5rem 1.5rem;letter-spacing: 2px; text-transform: uppercase; }
+h1.title-secao{    font-family: font-titulos,serif;color: #f47811;border-bottom: 3px solid #0057b9;display: table;margin: 0 auto;font-size: 2.2rem;font-weight: 100;padding: .5rem 1.5rem;letter-spacing: 2px; text-transform: uppercase; }
 h1{font-family: font-titulos,serif;color: #f47811;display: table;margin: 0 0 1rem 0;font-size: 1.5rem;font-weight: 100;letter-spacing: 2px; text-transform: uppercase;}
 h2{font-size: 1.2rem;}
+p.textochamado{left: 64%; position: relative; top: 506%; width: 500px;}
+
 p{ font-size: 1rem;line-height: 1.5rem; color: #0057b9;}
 /*p,s,a{}*/
 
 /*CABECALHO*/
 .cabecalho{    background-color: #feefe1;display: table;width: 100%;border-bottom: 6px solid #f89338; position: relative}
-.cabecalho nav{display: flex; align-items: center; margin: 0 auto; max-width: 1400px; width: 100%}
+.cabecalho nav{display: flex; align-items: center; margin: 0 auto; max-width: 1400px; width: 87%}
 .menu{font-family: font-menu,sans-serif; display: flex; align-items: center}
 .menu li{float: left}
 .logo{    max-width: 170px;float: left;margin: 0 1rem;text-align: center;}
@@ -77,7 +79,7 @@ select{font-size: 1rem; color: #0057B9; font-family: "font-texto"; max-width: 15
 .formContato label.newsletter{ max-width: 460px; margin: 0 auto 1rem; display: table;}
 .newsletter input{ width: 13px;float: left;margin: .4rem .5rem .4rem 0;}
 .newsletter p{ float: left; width: 100%;}
-input[type=submit]{ max-width: 298px; color: #0057B9;float: right; cursor: pointer; position: relative; left: -41%;}
+input[type=submit]{ max-width: 200px; color: #0057B9;float: right; cursor: pointer;}
 input[type=submit]:hover{ background: #0057B9; color: #fff;}
 
 /* BANNER */

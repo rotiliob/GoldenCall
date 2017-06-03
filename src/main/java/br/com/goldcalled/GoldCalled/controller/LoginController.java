@@ -26,6 +26,8 @@ public class LoginController {
     @RequestMapping("logar")
     public String efetuarLogin(Usuario usuario){
         Usuario usuarioBanco = usuarioRepository.findByUsuario(usuario.getLogin());
+        if (usuarioBanco ==null)
+            return loginForm();
 
         if (usuario.getLogin().equalsIgnoreCase(usuarioBanco.getLogin()) &&
                 usuario.getSenha().equalsIgnoreCase(usuarioBanco.getSenha()) &&
