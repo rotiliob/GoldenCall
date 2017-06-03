@@ -18,7 +18,7 @@
 
   <link href="carrossel/owl.carousel.css" rel="stylesheet"/>
   <script src="carrossel/owl.carousel.min.js" async></script>
-  <title>GoldCalled - Login</title>
+  <title>GoldenCall - Login</title>
 </head>
 <body>
 
@@ -32,7 +32,7 @@
   <section data-content class="institucional">
     <section class="centro">
     
-      <form name="formLogin" class="formContato" action="logar">
+      <form name="formLogin" class="formContato" action="logar" method="get">
         <label><p>Login </p><input type="text" name="login" required="" style="width: 300px"></label>
         <label><p>Senha</p><input type="password" name="senha" required="" style="width: 300px" ></label>
        
@@ -43,9 +43,7 @@
 
 	<a href="/cadusuario" style="font-size: 10pt; position: relative;top: 15%;left: -20%">
         Cadastrar-se </a>
-        
-    <a href="#" style="font-size: 10pt; position: relative;top: 9%;left: -11%">
-        Esqueci a senha </a>
+
 
       </form>
 

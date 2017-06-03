@@ -1,7 +1,7 @@
 package br.com.goldcalled.GoldCalled.vo;
 
 import javax.persistence.*;
-import java.awt.*;
+import java.util.List;
 
 @Entity
 public class Usuario extends Pessoa{
@@ -14,20 +14,23 @@ public class Usuario extends Pessoa{
     @Column(name = "tipo_usuario", nullable = false)
     private String tipoUsuario;
 
-    @OneToMany
-    private Chamado chamado;
     //-------------------End Variable-------------------//
     //--------------------------------------------------//
+
+    @OneToMany(mappedBy="usuario")
+    private List<Chamado> chamados;
 
     //-------------------------------------------------//
     //-------------------Constructor-------------------//
     public Usuario() {
     }
 
-    public Usuario( String login, String senha, String tipoUsuario, Pessoa pessoa) {
+    public Usuario( String login, String senha, String tipoUsuario, Pessoa pessoa, List<Chamado> chamados) {
         this.login = login;
         this.senha = senha;
         this.tipoUsuario = tipoUsuario;
+        this.chamados = chamados;
+
     }
     //-------------------End Constructor-------------------//
     //-----------------------------------------------------//
@@ -58,6 +61,15 @@ public class Usuario extends Pessoa{
     public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
+
+    public List<Chamado> getChamados() {
+        return chamados;
+    }
+
+    public void setChamados(List<Chamado> chamados) {
+        this.chamados = chamados;
+    }
+
     //-------------------End Getters and Setters-------------------//
     //-------------------------------------------------------------//
 
