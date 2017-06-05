@@ -32,7 +32,7 @@
   <section data-content class="institucional">
     <section class="centro">
     
-      <form name="formLogin" class="formContato" action="logar" method="get">
+      <form name="formLogin" class="formContato" action="logar" method="post">
         <label><p>Login </p><input type="text" name="login" required="" style="width: 300px"></label>
         <label><p>Senha</p><input type="password" name="senha" required="" style="width: 300px" ></label>
        
