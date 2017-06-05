@@ -4,6 +4,8 @@ import br.com.goldcalled.GoldCalled.repository.UsuarioRepository;
 import br.com.goldcalled.GoldCalled.vo.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -23,8 +25,8 @@ public class LoginController {
     @RequestMapping("logout")
     public String logout(){ return loginController.loginForm(); }
 
-    @RequestMapping("logar")
-    public String efetuarLogin(Usuario usuario){
+    @PostMapping("logar")
+    public String efetuarLogin(@ModelAttribute Usuario usuario){
         Usuario usuarioBanco = usuarioRepository.findByUsuario(usuario.getLogin());
         if (usuarioBanco ==null)
             return loginForm();
