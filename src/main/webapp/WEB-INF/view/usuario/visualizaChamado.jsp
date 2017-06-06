@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,49 +31,47 @@
         <ul class="menu">
 
             <!--troca isso aqui pelo link de um uma pagina com lista de todos os chamado de apenas um usuario-->
-            <li><a href="usuario/chamadosRealizadosUsuario">Acompanhar Meus Chamados</a></li>
+            <li><a href="/usuario/chamadosRealizadosUsuario">Acompanhar Meus Chamados</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
     <div class="titulo">
-        <h1 class="title-secao">Cadastro Para <a href="usuario/chamadosRealizadosUsuario"><u>Chamados</u></a></h1>
+        <h1 class="title-secao">Vizualização do Chamado</h1>
     </div>
 
     <div class="dicasTexto" >
-        <p class="textochamado">Preencha todos os campos como conforme as instruções</p>
+        <p class="textochamado">Observe os campos com atenção para atender o chamado</p>
     </div>
 
 
     <section data-content class="institucional">
         <section class="centro">
 
-            <form name="formContato" class="formContato" action="/criarChamado" th:action="@{/criarChamado}" th:="${chamado}"method="post">
+            <form name="formContato" class="formContato" action="#">
 
-                <label><p>Matricula</p><input type="text" name="matricula" required></label>
-                <label><p>Ramal</p><input type="text" name="ramal" ></label>
+                <label><p>Matricula</p><h2>${chamado.matricula}</h2><p style="left: 5%;position: relative; ">codigo: </p><h2>${chamado.usuario.id}</h2></label>
+                <label><p>Ramal</p><h2>${chamado.ramal}</h2></label>
+                <label><p>Data de Abertura</p><br><h2>${chamado.dataCriacao}</h2></label>
+
+                <label><p>O usuário está em: </p> <h2>${chamado.usuario.setor}</h2></label>
 
                 <h3>Detalhes do chamado</h3>
 
-                <label>
-                    <p>Equipamentos ou softwares?</p>
-                    <select name="tipoChamado">
-                        <option value="null"></option>
-                        <option value="equipamentos">equipamentos</option>
-                        <option value="softwares">softwares</option>
-                        <option value="outros">Outros...</option>
-                    </select>
-                </label>
+                <label> <p>Equipamentos ou softwares?</p> <h2>${chamado.tipoChamado}</h2> </label>
 
 
                 <label>
-                    <p>Descreva o problema</p>
-                    <textarea name="descricaoChamado"  rows="7"></textarea>
+                    <p>Resumo do Problema:</p>
+                    <textarea  rows="7"  readonly>${chamado.descricaoChamado}</textarea>
                 </label>
 
+                <label>
+                    <p>Relatório Técnico:</p>
+                    <textarea name="parecerTecnico"  rows="7" readonly>${chamado.parecerTecnico}</textarea>
+                </label>
 
-                <input type="submit" value="Cadastrar">
                 <div style="clear: both"></div>
             </form>
 

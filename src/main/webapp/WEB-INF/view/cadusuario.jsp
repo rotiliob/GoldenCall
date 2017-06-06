@@ -38,7 +38,7 @@
         <label><p>Senha</p><input type="password" name="senha" ></label>
         <label><p>Tipo de Acesso</p>
             <select name= "tipoUsuario">
-                 <option value="usuario">Usu�rio</option>
+                 <option value="usuario">Usuário</option>
                  <option value="administrador">Administrador</option>
                  <option value="tecnico">Tecnico</option>
             </select><br/>
