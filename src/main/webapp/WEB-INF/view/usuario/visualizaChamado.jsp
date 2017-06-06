@@ -51,7 +51,7 @@
 
             <form name="formContato" class="formContato" action="#">
 
-                <label><p>Matricula</p><h2>${chamado.matricula}</h2><p style="left: 5%;position: relative; ">codigo: </p><h2>${chamado.usuario.id}</h2></label>
+                <label><p>Matricula</p><h2>${chamado.matricula}</h2><p style="left: 5%;position: relative; ">Nome: </p><h2>${chamado.usuario.nome}</h2></label>
                 <label><p>Ramal</p><h2>${chamado.ramal}</h2></label>
                 <label><p>Data de Abertura</p><br><h2>${chamado.dataCriacao}</h2></label>
 
