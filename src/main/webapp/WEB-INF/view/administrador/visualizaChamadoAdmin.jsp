@@ -27,9 +27,12 @@
 
         <figure class="logo"><img src="/img/espaco.PNG"></figure>
         <figure class="logo"><img src="/img/espaco.PNG"></figure>
-              <a href="/usuario/usuarioIndex"><u><p>Início</u></p></a>
-              <a href="/usuario/chamadosRealizadosUsuario"><u><p>Lista de Chamados</a></u></p>
-              <a href="/"><u><p>Sair</u></p></a>
+        <span title="button-menu"></span>
+        <ul class="menu">
+
+            <!--troca isso aqui pelo link de um uma pagina com lista de todos os chamado de apenas um usuario-->
+            <li><a href="/usuario/chamadosRealizadosUsuario">Acompanhar Meus Chamados</a></li>
+        </ul>
     </nav>
 </header>
 
@@ -68,8 +71,7 @@
                     <p>Relatório Técnico:</p>
                     <textarea name="parecerTecnico"  rows="7" readonly>${chamado.parecerTecnico}</textarea>
                 </label>
-                <a href="/usuario/usuarioIndex"><u><p style="left: 5%;position: relative; ">Novo Chamado</u></a></p>
-                <a href="/usuario/chamadosRealizadosUsuario"><u><p style="left: 5%;position: relative; ">Chamados</u></a></p>
+                <a href="/administrador/listaChamadosAdmin"><u><p style="left: 5%;position: relative; ">Chamados</u></a></p>
                 <div style="clear: both"></div>
             </form>
 

@@ -25,11 +25,11 @@
 <header class="cabecalho">
     <nav>
 
-        <figure class="logo"><img src="/img/espaco.PNG"></figure>
-        <figure class="logo"><img src="/img/espaco.PNG"></figure>
+            <a href="/tecnico/tecnicoIndex"><u><p>Início</u></p></a>
+            <a href="/tecnico/listaChamadoTec"><u><p>Lista de Chamados</a></u></p>
+            <a href="/tecnico/listaChamadoTecConcluido"><u><p>Meus Chamados Realizados</u></p></a>
+            <a href="/"><u><p>Sair</u></p></a>
 
-        <a href="/usuario/usuarioIndex"><u><p>Início</u></p></a>
-        <a href="/"><u><p>Sair</u></p></a>
        </nav>
 </header>
 
@@ -72,7 +72,7 @@
 
                 <c:forEach var="chamado" items="${chamados}">
                  <tr>
-                    <td class="tg-6k2t"><a href="/usuario/visualizaChamado/${chamado.id}"><u>${chamado.id}</u></a></td>
+                    <td class="tg-6k2t"><a href="/tecnico/listaChamadoTec/${chamado.id}"><u>${chamado.id}</u></a></td>
                     <td class="tg-6k2t">${chamado.usuario.nome}</td>
                     <td class="tg-6k2t">${chamado.usuario.setor}</td>
                     <td class="tg-6k2t">${chamado.descricaoChamado}</td>

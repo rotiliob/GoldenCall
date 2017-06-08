@@ -25,11 +25,11 @@
 <header class="cabecalho">
     <nav>
 
-        <figure class="logo"><img src="/img/espaco.PNG"></figure>
-        <figure class="logo"><img src="/img/espaco.PNG"></figure>
-
-        <a href="/usuario/usuarioIndex"><u><p>Início</u></p></a>
-        <a href="/"><u><p>Sair</u></p></a>
+           <a href="/tecnico/tecnicoIndex"><u><p>Início</u></p></a>
+           <a href="/tecnico/listaChamadoTec"><u><p>Lista de Chamados</a></u></p>
+           <a href="/tecnico/listaChamadoTecConcluido"><u><p>Meus Chamados Realizados</u></p></a>
+           <a href="/"><u><p>Sair</u></p></a>
+        </ul>
        </nav>
 </header>
 
@@ -38,7 +38,7 @@
     <div class="bg"></div>
 
     <section data-content class="empreenIndex">
-        <h1 class="title-secao">Chamados</h1>
+        <a href ="/tecnico/listaChamadoTec"><h1 class="title-secao">Chamados</h1></a>
         <div class="empreendimento" data-slider="empreend">
 
             <style type="text/css">
@@ -71,16 +71,18 @@
                 <!--   // -->
 
                 <c:forEach var="chamado" items="${chamados}">
-                 <tr>
-                    <td class="tg-6k2t"><a href="/usuario/visualizaChamado/${chamado.id}"><u>${chamado.id}</u></a></td>
-                    <td class="tg-6k2t">${chamado.usuario.nome}</td>
-                    <td class="tg-6k2t">${chamado.usuario.setor}</td>
-                    <td class="tg-6k2t">${chamado.descricaoChamado}</td>
-                    <td class="tg-mb3i">${chamado.ramal}</td>
-                    <td class="tg-mb3i">${chamado.dataCriacao}</td>
-                    <td class="tg-mb3i">${chamado.dataConclusao}</td>
-                    <td class="tg-mb3i">${chamado.status}</td>
-                  </tr>
+                    <c:if test = "${chamado.status == 'Concluido'}">
+                        <tr>
+                            <td class="tg-6k2t"><a href="/tecnico/listaChamadoTec/${chamado.id}"><u>${chamado.id}</u></a></td>
+                            <td class="tg-6k2t">${chamado.usuario.nome}</td>
+                            <td class="tg-6k2t">${chamado.usuario.setor}</td>
+                            <td class="tg-6k2t">${chamado.descricaoChamado}</td>
+                            <td class="tg-mb3i">${chamado.ramal}</td>
+                            <td class="tg-mb3i">${chamado.dataCriacao}</td>
+                            <td class="tg-mb3i">${chamado.dataConclusao}</td>
+                            <td class="tg-mb3i">${chamado.status}</td>
+                        </tr>
+                    </c:if>
                 </c:forEach>
 
             </table>

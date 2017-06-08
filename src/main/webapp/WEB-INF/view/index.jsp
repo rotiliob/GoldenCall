@@ -41,9 +41,6 @@
 <div style="clear: both"></div>
 <br><br>
 
-	<a href="/cadusuario" style="font-size: 10pt; position: relative;top: 15%;left: -20%">
-        Cadastrar-se </a>
-
 
       </form>
 

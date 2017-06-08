@@ -1,1 +1,1 @@
-insert into usuario
+--insert into usuario (id_pessoa,funcao,nome,setor,nome_usuario,senha,tipo_usuario) values ('99','Gestor','admin','gestao','admin','admin','administrador')

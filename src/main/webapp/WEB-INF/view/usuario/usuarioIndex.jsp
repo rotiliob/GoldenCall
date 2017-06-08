@@ -26,18 +26,16 @@
 
         <figure class="logo"><img src="/img/espaco.PNG"></figure>
         <figure class="logo"><img src="/img/espaco.PNG"></figure>
-        <span title="button-menu"></span>
-        <ul class="menu">
 
-            <!--troca isso aqui pelo link de um uma pagina com lista de todos os chamado de apenas um usuario-->
-            <li><a href="usuario/chamadosRealizadosUsuario">Acompanhar Meus Chamados</a></li>
-        </ul>
+                <a href="/usuario/chamadosRealizadosUsuario"><u><p>Lista de Chamados</a></u></p>
+                <a href="/"><u><p>Sair</u></p></a>
+
     </nav>
 </header>
 
 <main>
     <div class="titulo">
-        <h1 class="title-secao">Cadastro Para <a href="usuario/chamadosRealizadosUsuario"><u>Chamados</u></a></h1>
+        <h1 class="title-secao">Cadastro Para <a href="/usuario/chamadosRealizadosUsuario"><u>Chamados</u></a></h1>
     </div>
 
     <div class="dicasTexto" >
@@ -51,13 +49,13 @@
             <form name="formContato" class="formContato" action="/criarChamado" th:action="@{/criarChamado}" th:="${chamado}"method="post">
 
                 <label><p>Matricula</p><input type="text" name="matricula" required></label>
-                <label><p>Ramal</p><input type="text" name="ramal" ></label>
+                <label><p>Ramal</p><input type="text" name="ramal" required></label>
 
                 <h3>Detalhes do chamado</h3>
 
                 <label>
                     <p>Equipamentos ou softwares?</p>
-                    <select name="tipoChamado">
+                    <select name="tipoChamado"required>
                         <option value="null"></option>
                         <option value="equipamentos">equipamentos</option>
                         <option value="softwares">softwares</option>
@@ -68,7 +66,7 @@
 
                 <label>
                     <p>Descreva o problema</p>
-                    <textarea name="descricaoChamado"  rows="7"></textarea>
+                    <textarea name="descricaoChamado"  rows="7"required></textarea>
                 </label>
 
 
